@@ -71,3 +71,7 @@ python train_t5_base.py
 |------|-----------:|--------------:|
 | T5-small | 6 | 1.1250 |
 | T5-base | 3 | **1.0897** |
+
+<img width="625" height="468" alt="Screenshot 2026-01-03 at 6 46 18 PM" src="https://github.com/user-attachments/assets/76b9e0b3-2b47-436d-bb7e-b0901245c86c" />
+
+
