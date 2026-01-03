@@ -1,0 +1,10 @@
+torch>=2.0.0
+transformers>=4.36.0
+datasets>=2.14.0
+sentencepiece>=0.1.99
+numpy>=1.23
+tqdm>=4.65
+scikit-learn>=1.2
+rouge-score>=0.1.2
+sacrebleu>=2.3.0
+evaluate>=0.4.0
