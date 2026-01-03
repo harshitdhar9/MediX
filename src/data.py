@@ -4,6 +4,8 @@ import pandas as pd
 import os
 from datasets import load_dataset
 
+#Load dataset from Hugging Face
+
 df=load_dataset("cbasu/Med-EASi")
 
 train_data=pd.DataFrame(df['train'])
@@ -18,12 +20,16 @@ df=pd.read_csv('csv_data_raw/train_med_easi.csv')
 df1=pd.read_csv('csv_data_raw/val_med_easi.csv')
 df2=pd.read_csv('csv_data_raw/test_med_easi.csv')
 
+#Combine Expert and Simple columns
+
 text_train=df[["Expert","Simple"]]
 text_val=df1[["Expert","Simple"]]
 text_test=df2[["Expert","Simple"]]
 
 print(text_train.head())
 print(text_train.shape)
+
+#Save processed data
 
 text_train.to_csv("csv_data_processed/expert_simple_train.csv", index=False)
 text_val.to_csv("csv_data_processed/expert_simple_val.csv", index=False)
