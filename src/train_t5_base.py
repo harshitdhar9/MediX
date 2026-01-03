@@ -34,8 +34,8 @@ def train():
     device = torch.device("mps" if torch.backends.mps.is_available() else "cpu")
     print("Using device:", device)
 
-    dataset=MedEasiDataset("/Users/harshitdhar/Downloads/MediX/dataset/csv_data_processed/expert_simple_train.csv")
-    val_dataset=MedEasiDataset("/Users/harshitdhar/Downloads/MediX/dataset/csv_data_processed/expert_simple_val.csv")
+    dataset=MedEasiDataset("dataset/csv_data_processed/expert_simple_train.csv")
+    val_dataset=MedEasiDataset("dataset/csv_data_processed/expert_simple_val.csv")
 
     tokenizer=TokenizerT5(model_name="google-t5/t5-base",
                           max_length=128)
