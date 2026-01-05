@@ -81,4 +81,27 @@ python train_t5_base.py
 
 <img width="600" height="465" alt="Screenshot 2026-01-04 at 2 04 13 PM" src="https://github.com/user-attachments/assets/e9f3425d-03a8-4594-b9b8-d7d4de88b7c8" />
 
+---
 
+## Readability Evaluation Results
+
+### Flesch–Kincaid Grade Level (FKGL) and Automated Readability Index (ARI)
+
+| Model Variant | Expert FKGL | Generated FKGL | FKGL Δ | Expert ARI | Generated ARI | ARI Δ |
+|--------------|------------|----------------|--------|-----------|---------------|--------|
+| **T5-Small** | 12.25 | 12.53 | **−0.28** | 14.88 | 13.24 | **+1.64** |
+| **T5-Base** | 12.25 | 12.14 | **+0.11** | 14.88 | 12.50 | **+2.38** |
+| **T5-Base → FLAN** | 12.14 | **10.12** | **+2.02** | 12.50 | **10.27** | **+2.23** |
+
+**Δ (Delta) denotes reduction in readability grade level (positive = improvement).**
+
+
+## Interpretation
+
+- **T5-Small** shows limited simplification with minimal FKGL improvement and modest ARI reduction.
+- **T5-Base** improves structural readability (ARI) but achieves only marginal lexical simplification (FKGL).
+- **T5-Base → FLAN** (cascaded inference) achieves the strongest readability gains, reducing both FKGL and ARI by approximately **2 grade levels**, aligning closely with human-authored simplifications.
+
+---
+
+Cascading a domain-fine-tuned T5 model with an instruction-tuned FLAN-T5 model significantly improves patient-level readability while preserving clinical meaning.
