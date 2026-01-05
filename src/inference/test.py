@@ -6,7 +6,7 @@ from torch.utils.data import DataLoader
 import textstat
 from tqdm import tqdm
 
-MODEL_PATH = "src/checkpoints1/medix-t5-small"
+MODEL_PATH = "src/checkpoints/medix-t5-small"
 TEST_CSV = "dataset/csv_data_processed/expert_simple_test.csv"
 BATCH_SIZE = 4
 MAX_LENGTH = 128

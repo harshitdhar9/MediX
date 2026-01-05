@@ -64,7 +64,7 @@ def train():
         "val_loss": []
     }
 
-    save_dir = "checkpoints1/medix-t5-small"
+    save_dir = "checkpoints/medix-t5-small"
     os.makedirs(save_dir, exist_ok=True)
 
     for epoch in range(epochs):
