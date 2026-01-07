@@ -105,3 +105,5 @@ python train_t5_base.py
 ---
 
 Cascading a domain-fine-tuned T5 model with an instruction-tuned FLAN-T5 model significantly improves patient-level readability while preserving clinical meaning.
+
+Deployed on HF : https://huggingface.co/spaces/Harshit999Dhar/Seq2Seq_Medical_Simplification
